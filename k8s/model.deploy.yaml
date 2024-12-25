@@ -6,11 +6,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: model
+      app: gabrielreis-model
   template:
     metadata:
       labels:
-        app: gabrielreis-playlist-recommender
+        app: gabrielreis-model
     spec:
       containers:
       - name: model
