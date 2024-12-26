@@ -16,4 +16,4 @@ spec:
       - name: persistent-storage
         persistentVolumeClaim:
           claimName: project2-pvc-gabrielreis
-      backoffLimit: 4
+    backoffLimit: 4
