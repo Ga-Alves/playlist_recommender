@@ -4,6 +4,9 @@ metadata:
   namespace: gabrielreis
   name: project2-pvc-gabrielreis
 spec:
+ selector:
+    matchLabels:
+      namespace: gabrielreis
   accessModes:
     - ReadWriteMany
   storageClassName: standard
