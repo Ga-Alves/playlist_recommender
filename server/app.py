@@ -17,7 +17,7 @@ def recomend():
     body = request.get_json(force=True)
     songs = body['songs']
 
-    FILE = open('../data/model_rules', 'rb')
+    FILE = open('/data/model_rules', 'rb')
 
     store = pickle.load(FILE)
 

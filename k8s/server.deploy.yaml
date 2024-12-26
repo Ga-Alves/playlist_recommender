@@ -17,3 +17,11 @@ spec:
         image: quay.io/gaalves/playlists-recommender-server:0.1
         ports:
         - containerPort: 52023
+        volumeMounts:
+        - name: persistent-storage
+          mountPath: /data
+          readOnly: true
+      volumes:
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: project2-pvc-gabrielreis
