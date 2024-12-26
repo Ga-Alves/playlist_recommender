@@ -16,5 +16,5 @@ spec:
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:
-          claimName: project2-pvc-gabrielreis
+          claimName: project2-pv2-gabrielreis
       restartPolicy: Never
