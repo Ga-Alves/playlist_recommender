@@ -4,7 +4,7 @@ metadata:
   namespace: gabrielreis
   name: project2-pv2-gabrielreis
 spec:
- selector:
+  selector:
     matchLabels:
       namespace: gabrielreis
   accessModes:
