@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: model-job
 spec:
+  backoffLimit: 4
   template:
     spec:
       containers:
@@ -16,4 +17,3 @@ spec:
       - name: persistent-storage
         persistentVolumeClaim:
           claimName: project2-pvc-gabrielreis
-    backoffLimit: 4
