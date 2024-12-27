@@ -18,7 +18,6 @@ spec:
         volumeMounts:
           - name: persistent-storage
             mountPath: /data
-        command: ["python", "./app/app.py"]
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:
