@@ -5,6 +5,6 @@ WORKDIR /app
 COPY ./requirements.txt .
 RUN pip install --requirement requirements.txt
 
-COPY ./rulesGenerator.py .
+COPY ./app.py .
 
 CMD ["python", "./app.py"]
