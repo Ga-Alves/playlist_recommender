@@ -9,7 +9,7 @@ spec:
       namespace: gabrielreis
   accessModes:
     - ReadWriteMany
-  storageClassName: project2-pv2-gabrielreis
+  storageClassName: standard
   resources:
     requests:
       storage: 1Gi
