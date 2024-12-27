@@ -1,10 +1,16 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: model-job
+  name: model-deployment
 spec:
-  backoffLimit: 4
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gabrielreis-model
   template:
+    metadata:
+      labels:
+        app: gabrielreis-model
     spec:
       containers:
       - name: model
@@ -17,4 +23,3 @@ spec:
       - name: persistent-storage
         persistentVolumeClaim:
           claimName: project2-pv2-gabrielreis
-      restartPolicy: Never
