@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: model
-        image: quay.io/gaalves/playlists-recommender-model:0.1
+        image: quay.io/gaalves/playlists-recommender-model:0.2
         volumeMounts:
           - name: persistent-storage
             mountPath: /data
