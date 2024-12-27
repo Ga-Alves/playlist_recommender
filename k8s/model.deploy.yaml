@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: model-deployment
+  namespace: gabrielreis
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: gabrielreis-model
@@ -15,10 +16,10 @@ spec:
       containers:
       - name: model
         image: quay.io/gaalves/playlists-recommender-model:0.2
-        volumeMounts:
-          - name: persistent-storage
-            mountPath: /data
-      volumes:
-      - name: persistent-storage
-        persistentVolumeClaim:
-          claimName: project2-pv2-gabrielreis
+      #   volumeMounts:
+      #     - name: persistent-storage
+      #       mountPath: /data
+      # volumes:
+      # - name: persistent-storage
+      #   persistentVolumeClaim:
+      #     claimName: project2-pv2-gabrielreis
