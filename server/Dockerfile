@@ -7,4 +7,6 @@ RUN pip install --requirement requirements.txt
 
 COPY ./app.py .
 
+RUN mkdir -p /data
+
 CMD ["python", "./app.py"]

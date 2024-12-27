@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: quay.io/gaalves/playlists-recommender-server:0.1
+        image: quay.io/gaalves/playlists-recommender-server:0.2
         ports:
         - containerPort: 52023
         volumeMounts:
