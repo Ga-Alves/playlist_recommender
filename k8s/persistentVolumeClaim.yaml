@@ -9,7 +9,7 @@ spec:
       namespace: gabrielreis
   accessModes:
     - ReadWriteMany
-  storageClassName: standard
+  storageClassName: default-storage-class
   resources:
     requests:
       storage: 1Gi
