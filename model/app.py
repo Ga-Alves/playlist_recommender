@@ -1,7 +1,7 @@
 from fpgrowth_py import fpgrowth
 import pandas as pd
 import  pickle
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import ssl
 import os
 
@@ -15,8 +15,10 @@ playlists = df.groupby('pid')['track_name'].apply(list).tolist()
 
 freqItemSet, rules = fpgrowth(playlists, minSupRatio=0.07, minConf=0.1)
 
+brasil_timezone = timezone(timedelta(hours=-3))
+
 store = {
-    'createdAt': datetime.now().isoformat(),
+    'createdAt': datetime.now(brasil_timezone).isoformat(),
     'rules': rules
 }
 
