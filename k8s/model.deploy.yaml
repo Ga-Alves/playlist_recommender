@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: model-job-v2
+  name: model-job-v4
   namespace: gabrielreis
 spec:
   template:
