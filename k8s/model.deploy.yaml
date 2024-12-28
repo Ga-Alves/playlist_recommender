@@ -1,13 +1,9 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: batch/v1
+kind: Job
 metadata:
-  name: model-deployment-v2
+  name: model-job-v2
   namespace: gabrielreis
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: gabrielreis-model
   template:
     metadata:
       labels:
@@ -26,3 +22,5 @@ spec:
       - name: persistent-storage
         persistentVolumeClaim:
           claimName: project2-pv2-gabrielreis
+      restartPolicy: Never
+  backoffLimit: 4
