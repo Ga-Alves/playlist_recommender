@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: model-deployment
+  name: model-deployment-v1
   namespace: gabrielreis
 spec:
   replicas: 1
@@ -19,6 +19,9 @@ spec:
         volumeMounts:
           - name: persistent-storage
             mountPath: /data
+        env:
+        - name: DATASET
+          value: "https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv"
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:

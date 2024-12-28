@@ -3,10 +3,13 @@ import pandas as pd
 import  pickle
 from datetime import datetime
 import ssl
+import os
+
+DATASET = os.environ.get('DATASET')
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-df = pd.read_csv('https://homepages.dcc.ufmg.br/~cunha/hosted/cloudcomp-2023s2-datasets/2023_spotify_ds1.csv', usecols=[6, 7])
+df = pd.read_csv(DATASET, usecols=[6, 7])
 
 playlists = df.groupby('pid')['track_name'].apply(list).tolist()
 
