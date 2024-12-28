@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: model-deployment-v1
+  name: model-deployment-v2
   namespace: gabrielreis
 spec:
   replicas: 1
