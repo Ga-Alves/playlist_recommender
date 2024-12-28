@@ -3,14 +3,14 @@
 Build and Publish REST API server
 
     cd server
-    docker build -t quay.io/gaalves/playlists-recommender-server:0.1 .
-    docker push quay.io/gaalves/playlists-recommender-server:0.1
+    docker build -t quay.io/gaalves/playlists-recommender-server:0.x .
+    docker push quay.io/gaalves/playlists-recommender-server:0.x
 
 Build and Publish model
 
     cd model
-    docker build -t quay.io/gaalves/playlists-recommender-model:0.1 .
-    docker push quay.io/gaalves/playlists-recommender-model:0.1
+    docker build -t quay.io/gaalves/playlists-recommender-model:0.x .
+    docker push quay.io/gaalves/playlists-recommender-model:0.x
 
 Run containers
 
