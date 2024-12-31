@@ -1,0 +1,12 @@
+project: gabrielreis-project
+source:
+  repoURL: https://github.com/Ga-Alves/playlist_recommender
+  path: k8s/
+  targetRevision: HEAD
+destination:
+  server: https://kubernetes.default.svc
+  namespace: gabrielreis
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
